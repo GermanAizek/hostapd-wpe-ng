@@ -1,9 +1,22 @@
 hostapd-wpe-ng (Wireless Pwnage Edition New Generation)
 ------------------------------------------
 
-**hostapd-wpe-ng.patch** - current release version for hostapd-2.10 by *Herman Semenov* <<GermanAizek@yandex.ru>>
+Used by other projects as dependencies:
+- [v1s1t0r1sh3r3/airgeddon](https://github.com/v1s1t0r1sh3r3/airgeddon)
+- [P0cL4bs/wifipumpkin3](https://github.com/P0cL4bs/wifipumpkin3)
+- [Tylous/SniffAir](https://github.com/Tylous/SniffAir)
+- [pinecone-wifi/pinecone](https://github.com/pinecone-wifi/pinecone)
 
-**hostapd-wpe.patch** - old release version for hostapd-2.6 by *Brad Antoniewicz* <<brad.antoniewicz@foundstone.com>> [@brad_anton](https://twitter.com/brad_anton)
+Summary
+----------
+
+**hostapd-wpe-ng.patch** - current release version for hostapd-2.10 and above by *Herman Semenov* <<GermanAizek@yandex.ru>>
+
+**hostapd-wpe.patch** - old release version for:
+
+- hostapd-2.6 by *Gabriel Huemann* <<gabriel@solstice.sh>>, Twitter: [@s0lst1c3](https://x.com/s0lst1c3)
+
+- hostapd-2.2 by *Brad Antoniewicz* <<brad.antoniewicz@foundstone.com>>, Twitter: [@brad_anton](https://x.com/brad_anton)
 
 About
 ----------
@@ -34,7 +47,7 @@ patch](http://www.foofus.net/?page_id=115) for older versions of hostapd < 2.6.
 hostapd-wpe also implements *CVE-2014-0160 (Heartbleed)* attacks against
 vulnerable clients. Inspiration for this was provided by the [Cupid PoC](https://github.com/lgrangeia/cupid):
 
-hostapd-wpe logs all data to stdout and hostapd-wpe.log
+hostapd-wpe logs all data to stdout and `hostapd-wpe.log`
 
 Quick Usage
 --------
@@ -45,21 +58,25 @@ will also be created, and hostapd-wpe is dependent on it.
 
 Basic usage is:
 
+```bash
     hostapd-wpe hostapd-wpe.conf 
+```
 
-Credentials will be displayed on the screen and stored in hostapd-wpe.log
+Credentials will be displayed on the screen and stored in `hostapd-wpe.log`
 
 Additional WPE command line options are:
 
+```
     -s  Return EAP-Success messages after credentials are harvested
     -k  Gratuitous probe responses (Karma mode) 
     -c  Attempt to exploit CVE-2014-0160 (Cupid mode)
+```
 
 Building  from sources
 ---------
 
 ```bash
-    $ git clone https://github.com/GermanAizek/hostapd-wpe-ng
+    $ git clone --recurse-submodules https://github.com/GermanAizek/hostapd-wpe-ng
     $ cd hostapd-wpe-ng
     $ sudo bash ./build.sh
 ```
