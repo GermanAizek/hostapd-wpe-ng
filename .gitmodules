@@ -1,0 +1,4 @@
+﻿[submodule "hostapd"]
+	path = hostapd
+	url = git://w1.fi/hostap.git
+	branch = main
