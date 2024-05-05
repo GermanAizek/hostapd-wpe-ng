@@ -10,7 +10,7 @@ Used by other projects as dependencies:
 Summary
 ----------
 
-**hostapd-wpe-ng.patch** - current release version for hostapd-2.10 and above by *Herman Semenov* <<GermanAizek@yandex.ru>>
+**hostapd-wpe-ng.patch** - current release version for hostapd-2.10 by *Mister-X-* Owner Community <<info@aircrack-ng.org>>, Github [@Mister-X-](https://github.com/Mister-X-)
 
 **hostapd-wpe.patch** - old release version for:
 
